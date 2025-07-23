@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Registration Form</title>
+  <link rel="stylesheet" href="day9.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Register</h2>
+    <form id="registrationForm" novalidate>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <div class="input-group">
+        <input type="password" id="password" name="password" required />
+        <button type="button" class="toggle-btn" onclick="togglePassword('password')">Show/Hide</button>
+      </div>
+      <small id="password-strength" class="strength"></small>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <div class="input-group">
+        <input type="password" id="confirmPassword" name="confirmPassword" required />
+        <button type="button" class="toggle-btn" onclick="togglePassword('confirmPassword')">Show/Hide</button>
+      </div>
+      <small id="confirm-password-error" class="error"></small>
+
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="city">City</label>
+      <select id="city" name="city" required>
+        <option value="">Select City</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Jaipur</option>
+        <option>Kolkata</option>
+        <option>Srinagar</option>
+        <option>Bhopal</option>
+        <option>Surat</option>
+        
+      </select>
+
+      <label class="checkbox">
+        <input type="checkbox" id="terms" required />
+        Agree To T&C
+      </label>
+
+      <button type="submit">Register</button>
+      <p id="message"></p>
+    </form>
+  </div>
+  <script src="day9.js"></script>
+</body>
+</html>
